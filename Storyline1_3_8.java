@@ -30,13 +30,21 @@ public class Storyline1_3_8 {
             System.out.println("You call the expert, but they don't pick up, and you waste precious time.");
             System.out.println("You now have to cut a wire without help.");
             choice = twoChoices("Cut red wire", "Cut yellow wire");
-            if (choice.equals("A")){
-                System.out.println("You hear a loud noise and think you cut the wrong wire, but it was just a bird, nothing happens");
+            if (choice.equals("A")) {
+                System.out.println(
+                        "You hear a loud noise and think you cut the wrong wire, but it was just a bird, nothing happens");
             } else {
-                System.out.println("Nothing happens")
+                System.out.println("Nothing happens");
             }
-            System.out.println("Now you have one wire left")
-            choice = twoChoices("Wait for the time to expire")
+            System.out.println("Now you have one wire left");
+            choice = twoChoices("Wait for the time to expire", "Cut the other wire");
+            if (choice.equals("A")) {
+                System.out.println(
+                        "You let time expire and in the last 5 seconds you here fast beeping and the bomb explodes");
+            } else {
+                System.out.println(
+                        "You cut the other wire, and a deactivation sound plays, the bomb was succesfully disabled");
+            }
         } else {
             System.out.println("You trip and your tools snag a wire, cutting it. Luckily, the bomb doesn't blow up.");
         }
