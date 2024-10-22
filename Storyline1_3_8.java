@@ -57,7 +57,7 @@ public class Storyline1_3_8 {
                             "You cut the red wire, and the bomb immideatly explodes, killing everyone including you");
                 } else {
                     System.out.println(
-                            "You cut the other wire, and a deactivation sound plays, the bomb was succesfully disabled");
+                            "You cut the other wire, and a strong beeping can be heard, however it was from a microwave underneath you, the bomb was succesfully disabled");
                 }
             }
             System.out.print("\nWould you like to play again?");
