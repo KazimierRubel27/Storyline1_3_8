@@ -25,22 +25,18 @@ public class Storyline1_3_8 {
                     "Your mission is to diffuse a bomb that has been placed on the top of the Empire State Building. " +
                     "After scaling the side, you reach the bomb. What do you do next?");
 
-            String choice = twoChoices("Call the expert before touching the bomb",
-                    "Waste no time and take out your defusing tools");
-
-            if (choice.equals("A")) {
+            if (twoChoices("Call the expert before touching the bomb",
+                    "Waste no time and take out your defusing tools").equals("A")) {
                 System.out.println("You call the expert, but they don't pick up, and you waste precious time.");
                 System.out.println("You now have to cut a wire without help.");
-                choice = twoChoices("Cut red wire", "Cut yellow wire");
-                if (choice.equals("A")) {
+                if (twoChoices("Cut red wire", "Cut yellow wire").equals("A")) {
                     System.out.println(
                             "You hear a loud noise and think you cut the wrong wire, but it was just a bird, nothing happens");
                 } else {
                     System.out.println("Nothing happens");
                 }
                 System.out.println("Now you have one wire left");
-                choice = twoChoices("Wait for the time to expire", "Cut the other wire");
-                if (choice.equals("A")) {
+                if (twoChoices("Wait for the time to expire", "Cut the other wire").equals("A")) {
                     System.out.println(
                             "You let time expire and in the last 5 seconds you here fast beeping and the bomb explodes");
                 } else {
@@ -51,8 +47,7 @@ public class Storyline1_3_8 {
                 System.out.println(
                         "You trip and your tools snag a yellow wire, cutting it. Luckily, the bomb doesn't blow up.");
                 System.out.println("You now are left with a bomb with one wire cut");
-                choice = twoChoices("You cut the the remaining red wire", "You wait for time to expire");
-                if (choice.equals("A")) {
+                if (twoChoices("You cut the the remaining red wire", "You wait for time to expire").equals("A")) {
                     System.out.println(
                             "You cut the red wire, and the bomb immideatly explodes, killing everyone including you");
                 } else {
@@ -67,6 +62,7 @@ public class Storyline1_3_8 {
             }
         }
         playChoice.close();
+
     }
 
 }
