@@ -1,13 +1,14 @@
 import java.util.Scanner;
 
 public class Storyline1_3_8 {
+    // Creates method to process user input and output correct decision
     public static String twoChoices(String optionOne, String optionTwo) {
         Scanner userChoice = new Scanner(System.in);
         System.out.println("You have two options,");
         System.out.println("A: " + optionOne);
         System.out.println("B: " + optionTwo);
         String choice = userChoice.nextLine().toUpperCase();
-
+        // Prevents user from not choosing a valid option
         while (!choice.equals("A") && !choice.equals("B")) {
             System.out.println("Please choose either A or B");
             System.out.println("A: " + optionOne);
@@ -18,9 +19,11 @@ public class Storyline1_3_8 {
     }
 
     public static void main(String[] args) {
+        // Creates scanner for user input so user can play multiple times
         Scanner playChoice = new Scanner(System.in);
         String play = "Y";
         while (play.equals("Y")) {
+            // Uses method paired with if and print statements to play the game
             System.out.println("You are a special agent working for the CIA. " +
                     "Your mission is to diffuse a bomb that has been placed on the top of the Empire State Building. " +
                     "After scaling the side, you reach the bomb. What do you do next?");
@@ -55,6 +58,7 @@ public class Storyline1_3_8 {
                             "You cut the other wire, and a strong beeping can be heard, however it was from a microwave underneath you, the bomb was succesfully disabled");
                 }
             }
+            // uses input to find if user wants to play again
             System.out.print("\nWould you like to play again?");
             String playTwo = playChoice.nextLine().toUpperCase();
             if (play.length() > 0) {
